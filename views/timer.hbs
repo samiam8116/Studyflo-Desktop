@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Meditation</title>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/d24161057c.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <link	rel="stylesheet" href="/stylesheets/timer.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- Google WebFonts --><link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/d24161057c.js" crossorigin="anonymous"></script>
+
+  </head>
+    <body>
+     <!-- Side bar -->
+     <div class="sidenav">
+      <a href="homepage.html"><i class="fas fa-home fa-3x"></i></a>
+      <a href="todopage.html"><i class="fas fa-tasks fa-3x"></i></a>
+      <a href="meditation.html"><i class="fas fa-spa fa-3x giconcolor"></i></a>
+      <a href="journal.html"><i class="fas fa-pencil-alt fa-3x piconcolor "></i></a>
+  </div>
+    <!-- end side nav -->
+        <div class="site-wrapper">
+          <div class="site-wrapper-inner">
+            <div class="cover-container">
+              <div class="masthead clearfix">
+                <div class="inner">
+                  <h3 class="masthead-brand">One Minute Meditation</h3>
+                  <div class="inner cover">
+
+<input id="page1" type="radio" name="screens" checked>
+        <section class="screen">
+          <br>
+          <h1 class="subhead">Go with your flo.</h1>
+          <br>
+          <p class="quote">Just one minute practicing meditation or mindfulness can improve your daily life.</p>
+          <br>
+            <button id="startBtn" class="btn btn-lg btn-secondary" onclick="onTimer(), playSound();">Begin Meditation</button>
+          </p>
+          <div id="timer">00</div>
+          <!-- sound <audio id="audio" src="https://www.soundjay.com/misc/sounds/wind-chime-1.mp3" autostart="false"></audio> -->
+          <h2 class="lead">
+        </h2>
+          <p>
+            <button class="btn btn-lg btn-secondary" onclick="pauseTimer();"><i class="fa fa-pause" aria-hidden="true"></i>
+</button>
+            <button class="btn btn-lg btn-secondary" onclick="stopTimer();"><i class="fa fa-refresh" aria-hidden="true"></i>
+</button>
+          </p>
+        </section>
+
+    </body>
+    <script src="timer.js"></script>
+    </html>
