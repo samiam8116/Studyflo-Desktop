@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Homepage</title>
+     <title>Studyflo | My Profile</title>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/d24161057c.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -71,6 +71,26 @@
             
         }
 
+     /* Colors of the Icons */
+        .fa-user {
+            color: #f0a8b0;
+        }
+        .fa-home {
+            color: #e6a6c4;
+        }
+        .fa-tasks {
+            color: #C6BCD0;
+        }
+        .fa-spa {
+            color: #9eb0c9;
+        }
+        .fa-pencil-alt {
+            color: #8cccd9;
+        }
+        .fa-water {
+            color: #a3bdad;
+        }
+        
         /* The navigation menu links */
         .sidenav a {
             text-align: center;
@@ -98,16 +118,18 @@
 </style>
 </head>
 <body>
-    <!-- Side bar -->
-    <div class="sidenav">
+   
+  <!-- /Side bar -->
+      <div class="sidenav">
         <a href="/users/profile"><i class="fas fa-user fa-3x"></i></a>
         <a href="/dash"><i class="fas fa-home fa-3x"></i></a>
         <a href="/todo"><i class="fas fa-tasks fa-3x"></i></a>
-        <a href="/timer"><i class="fas fa-spa fa-3x giconcolor"></i></a>
-        <a href="/journal"><i class="fas fa-pencil-alt fa-3x piconcolor "></i></a>
+        <a href="/timer"><i class="fas fa-spa fa-3x"></i></a>
+        <a href="/journal"><i class="fas fa-pencil-alt fa-3x"></i></a>
         <a href="/home"><i class="fas fa-water fa-3x"></i></a>
     </div>
-    <!-- /Side bar -->
+   
+
 <h2>Welcome to your profile, {{person.username}}! </h2>
 <h3>Feel free to make this page user friendly.</h3>
 <br>

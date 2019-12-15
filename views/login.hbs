@@ -1,6 +1,27 @@
+  <title>Studyflo | Login</title>
+  <link rel="stylesheet" href="/stylesheets/login.css">
+
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/d24161057c.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- Google WebFonts --><link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--- Include the above in your HEAD tag -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d24161057c.js" crossorigin="anonymous"></script>
+
+
 <main class="text-center">
   <form class="form-signin" method="post" action="login">
     <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
+      <a href="/users/signup">Dont have an account? Sign up here.</a><br>
     <input class="form-control" type="text" name="username" placeholder="User name" required autofocus>
     <input class="form-control" type="password" name="password" placeholder="Password" required>
     <div class="checkbox mb-3">
@@ -12,14 +33,6 @@
   </form>
   </main>
   -->
-<!-- if you don't want bootstraps -->
-<!--
-<form method="post" action="login">
-<input type="text" name="username" placeholder="User name"><br>
-<input type="password" name="password" placeholder="Password"><br>
-<input type="submit" value="Log in">
-</form>
--->
 
 {{#if success}}
 <p>Successfully created an account. Please log in</p>
