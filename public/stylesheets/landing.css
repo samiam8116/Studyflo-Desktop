@@ -73,22 +73,21 @@ body {
 }
 
 .still{
-    background: url(images/oceanwater.jpg) no-repeat center;
+    background: url(/images/oceanwater.jpg) no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     height: 500px;
 }
 
 .still2{
-    background: url(images/oceanwaves.jpg) no-repeat center;
+    background: url(/images/oceanwaves.jpg) no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     height: 500px;
-  
 }
 
 .still3{
-    background: url(images/beach.jpg) no-repeat center;
+    background: url(/images/beach.jpg) no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     height: 500px;
@@ -176,7 +175,7 @@ h5{color:#ee8669; font-weight: bold;}
   }
 }
 
-/*      FOOTER -------------------------------------------------------------------------*/
+/*FOOTER -------------------------------------------------------------------------*/
             
         .sec-footer{
             background: #738290;
@@ -278,5 +277,3 @@ h5{color:#ee8669; font-weight: bold;}
             text-transform: lowercase !important;
             color: lightpink;
         }
-
-  

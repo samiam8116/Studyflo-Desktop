@@ -1,17 +1,15 @@
 body{
     background-color: #818a92;
+    font-family: "Montserrat", -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
 }
 
 .words{
     margin-top: 50;
     color:black;
 }
-.words h3{
-    color:black;
-    font-family: "Montserrat", -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-    font-weight: bolder;
-    text-transform: uppercase;
-}
+
 
 
 .navbar {
@@ -62,7 +60,7 @@ body{
     vertical-align: middle;
     top: 42%;
     width: 100%;
-    color: white;
+    color: black;
 }
 
 .home-text h1{

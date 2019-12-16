@@ -19,27 +19,27 @@ body {
             padding-top: 20px;
             
         }
+
+        /* Colors of the Icons */
+          .fa-user {
+            color: #f0a8b0;
+          }
+          .fa-home {
+            color: #e6a6c4;
+          }
+          .fa-tasks {
+            color: #C6BCD0;
+          }
+          .fa-spa {
+            color: #9eb0c9;
+          }
+          .fa-pencil-alt {
+            color: #8cccd9;
+          }
+          .fa-water {
+            color: #a3bdad;
+          }
   
-         /* Colors of the Icons */
-         .fa-user {
-          color: #f0a8b0;
-      }
-      .fa-home {
-          color: #e6a6c4;
-      }
-      .fa-tasks {
-          color: #C6BCD0;
-      }
-      .fa-spa {
-          color: #9eb0c9;
-      }
-      .fa-pencil-alt {
-          color: #8cccd9;
-      }
-      .fa-water {
-          color: #a3bdad;
-      }
-      
         /* The navigation menu links */
         .sidenav a {
             text-align: center;

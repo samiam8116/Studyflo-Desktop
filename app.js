@@ -9,8 +9,9 @@ var usersRouter = require('./routes/users');
 var homeRouter = require('./routes/home');
 var dashRouter = require('./routes/dash');
 var todoRouter = require('./routes/todo');
-var journalRouter = require('./routes/journal');
 var timerRouter = require('./routes/timer');
+var journalRouter = require('./routes/journal');
+
 
 var app = express();
 
@@ -93,18 +94,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-//app.use(express.static('assets')); debugging and crying, per usual
-app.use('*/css',express.static('public/css'));
-app.use('*/js',express.static('public/js'));
-app.use('*/images',express.static('public/images'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/home', homeRouter);
 app.use('/dash', dashRouter);
 app.use('/todo', todoRouter);
-app.use('/journal', journalRouter);
 app.use('/timer', timerRouter);
+app.use('/journal', journalRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

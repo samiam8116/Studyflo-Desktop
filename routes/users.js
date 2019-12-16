@@ -39,6 +39,10 @@ router.get('/profile',loggedIn, function(req, res){
       res.render('profile', { person: req.user });
 });
 
+router.get('/dash', loggedIn, function(req, res){
+  res.render('dash', {person: req.user});
+});
+
 function notLoggedIn(req, res, next) {
   if (!req.user) {
     next();
@@ -61,9 +65,39 @@ router.post('/login',
     res.redirect('/users/profile'); // Successful. redirect to localhost:3000/users/profile
 });
 
+router.get('/addAssignment',function(req, res, next) {
+  res.render('addAssignment', {user: req.user, error: req.flash('error')});
+
+});
+
+/** stuff for adding a journal entry */
+router.post('/addAssignment',function(req, res, next) {
+  client.query('SELECT * FROM examusers WHERE username = $1', [req.body.username], function(err, result) {
+    if (err) {
+      console.log("Unable to query SELECT");
+      next(err);
+    }
+    if (result.rows.length > 0) {
+        console.log("user exists");
+        client.query('INSERT INTO assignment (username, description, due) VALUES($1, $2, $3)', [req.body.username, req.body.description,req.body.due], function(err, result) {
+          if (err) {
+            console.log("Unable to query INSERT");
+            next(err);
+          }
+          console.log("Assignment creation is successful");
+          res.render('addAssignment', {user: req.user , success: "true" });
+        });
+    }
+    else if (result.rows.length <= 0){
+        console.log("There is no user with that name!");
+        res.render('addAssignment', { error: "true" });
+    }
+  });
+});
+
 router.get('/signup',function(req, res) {
     // If logged in, go to profile page
-    if(req.user) {
+    if(req.user) { // if logs in
       return res.redirect('/users/profile');
     }
     res.render('signup'); // signup.hbs
@@ -75,7 +109,6 @@ function validUsername(username) {
 }
 
 function createUser(req, res, next){
-
   var salt = bcrypt.genSaltSync(10);
   var pwd = bcrypt.hashSync(req.body.password, salt);
 
@@ -95,6 +128,11 @@ router.post('/signup', function(req, res, next) {
     return res.render('signup');
   }
 
+  if (req.body.password !== req.body.password2){
+    console.log("no match");
+    res.render('signup', { errorMessage: "true"});
+  }
+
   client.query('SELECT * FROM users WHERE username=$1',[req.body.username], function(err,result){
     if (err) {
       console.log("sql error ");
@@ -112,5 +150,11 @@ router.post('/signup', function(req, res, next) {
 });
 // new stuff ends here
 
+module.exports = router;
+
+/* GET users listing. */
+router.get('/', function(req, res, next) {
+  res.send('respond with a resource');
+});
 
 module.exports = router;
