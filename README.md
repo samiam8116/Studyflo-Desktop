@@ -1,5 +1,6 @@
 # studyflo
 Go with your flo!
+https://dry-ridge-48487.herokuapp.com/
 
 
 This is a website made for students who want to be organized and stress free.
