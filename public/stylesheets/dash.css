@@ -2,12 +2,6 @@ body{
     background-color: #738290 !important;
     text-align: center;
 }
-
-img{
-    background-size: cover;
-    background-attachment: fixed;
-    margin-top: 0%;
-}
 .welcome {
     position: relative;
     text-align: center;
@@ -16,6 +10,11 @@ img{
     font-weight: bolder;
     text-transform: uppercase;
 }
+
+a img { 
+    border:none; 
+}
+
 
 .welcomeMessage {
     position: absolute;
@@ -211,4 +210,22 @@ figcaption {
     font-weight: bold;
     text-transform: lowercase !important;
     color: lightpink;
+}
+
+h5{color:#ee8669; font-weight: bold;}
+/* for bottom icons */
+.sideborder { border-left: thin grey solid;}
+.giconcolor {color: #efe5dc;}
+.yiconcolor {color: #efe5dc;}
+.piconcolor {color: #efe5dc;}
+.oiconcolor {color: #efe5dc;}
+.bcolor{background: #62d4cd; width: 200px;}
+.pcolor{background: #9b8dc8; width: 200px;}
+
+@media screen and (max-width: 480px) {
+  h1{ font-size:60px; }
+  .sideborder {
+     border-top: thin grey solid;
+     border-left: 0px;
+  }
 }

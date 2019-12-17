@@ -1,11 +1,9 @@
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap" rel="stylesheet">
     <link data-require="bootstrap@*" data-semver="3.2.0" rel="stylesheet"
@@ -19,24 +17,29 @@
     <script data-require="handlebars.js@1.3.0" data-semver="1.3.0"
         src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.js"></script>
     <script src="https://kit.fontawesome.com/d24161057c.js" crossorigin="anonymous"></script>
-
-    <link rel='stylesheet' href='/stylesheets/dash.css'/>
+    <link rel='stylesheet' href='/stylesheets/dash.css' />
+    <style>
+        .randomImage {
+            height: 40px;
+            width: 80px;
+        }
+    </style>
 
 </head>
 
 <body>
     <!--    Welcome Image, Message and Icons   -->
-
     <div class="welcome">
-        <img src="https://source.unsplash.com/random/1500x800/?nature" alt="Welcome" style="width:100%; position: center;">
+        <div id="randomImage"><a href=""></a></div>
         <div class="welcomeMessage">
-            <h3 id="quote" class="text-center random-quote-body"></h3><h2> Hi, {{person.username}}</h2>
+            <h3 id="quote" class="text-center random-quote-body"></h3>
+            <h2> Hi, {{person.username}}</h2>
             <p id="quotation"></p>
             <p id="source"></p>
             <button>Generate Quote</button>
         </div>
     </div>
-
+    <!-- /Side bar -->
     <div class="sidenav">
         <a href="/users/profile"><i class="fas fa-user fa-3x"></i></a>
         <a href="/users/dash"><i class="fas fa-home fa-3x"></i></a>
@@ -45,9 +48,6 @@
         <a href="/journal"><i class="fas fa-pencil-alt fa-3x piconcolor "></i></a>
         <a href="/home"><i class="fas fa-water fa-3x"></i></a>
     </div>
-    <!-- /Side bar -->
-
-    <!-- Foooter -->
     <section class="container-fluid sec-footer">
         <div class="container">
             <div class="row">
@@ -104,8 +104,8 @@
                 </div>
                 <!--.col-->
                 <div class="col text-center">
-                    <img src="images/sam_avi.png" alt="Ari" width="10%" height="10%">
-                    <img src="images/ari_avi.png" alt="Ari" width="10%" height="10%" style="position: unset;">
+                    <img src="/images/sam_avi.png" alt="Ari" width="10%" height="10%">
+                    <img src="/images/ari_avi.png" alt="Ari" width="10%" height="10%" style="position: unset;">
                     <figcaption>Arianna O'Neil & Samantha Silvia</figcaption>
                     <br class="clearfix">
                     <!--sam--><a href="https://github.com/samiam8116" class="snip1472"><i class="fab fa-github"></i></a>
@@ -123,3 +123,4 @@
 </body>
 <script src="/javascripts/quotes.js"></script>
 <script src="/javascripts/welcome.js"></script>
+<script src="/javascripts/images.js"></script>

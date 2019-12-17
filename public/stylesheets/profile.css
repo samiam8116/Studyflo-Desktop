@@ -19,6 +19,26 @@
     padding-top: 20px;
 }
 
+/* Colors of the Icons */
+.fa-user {
+    color: #f0a8b0;
+}
+.fa-home {
+    color: #e6a6c4;
+}
+.fa-tasks {
+    color: #C6BCD0;
+}
+.fa-spa {
+    color: #9eb0c9;
+}
+.fa-pencil-alt {
+    color: #8cccd9;
+}
+.fa-water {
+    color: #a3bdad;
+}
+
 /* The navigation menu links */
 
 .sidenav a {
@@ -32,4 +52,41 @@
 
 .sidenav a:hover {
     color: lightgray;
+}
+
+
+/*OTHER ---------------------------------*/
+body{
+    background-color: #738290 !important;
+    text-align: center;
+   
+}
+
+.welcome {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: "Montserrat", -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.welcomeMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Montserrat", -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: lightgrey;
+    /*  BOX STUFF  */
+    width: 500px;
+    padding: 50px;
+    margin: 20px;
+    background: rgba(204, 204, 204, 70%);
+}
+
+.welcomeMessage h2 {
+    font-weight: bold;
 }
